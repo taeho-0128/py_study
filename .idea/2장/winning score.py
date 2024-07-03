@@ -1,16 +1,23 @@
-apple3 = int(input())
-apple2 = int(input())
-apple1 = int(input())
-banana3 = int(input())
-banana2 = int(input())
-banana1 = int(input())
+Ashot = input()
+if not Ashot.isdigit():
+    exit("문자열이 숫자로만 이루어져 있지 않음")
+Ashot = int(Ashot)
+if not 0 <= Ashot <= 100:
+    exit("범위를 벗어남(0 <= n <= 100)")
+AfieldGoal = input()
+if not AfieldGoal.isdigit():
+    exit("문자열이 숫자로만 이루어져 있지 않음")
+AfieldGoal = int(AfieldGoal)
+if not 0 <= AfieldGoal <= 100:
+    exit("범위를 벗어남(0 <= n <= 100)")
+Afreethrow = input()
+if not Afreethrow.isdigit():
+    exit("문자열이 숫자로만 이루어져 있지 않음")
+Afreethrow = int(Afreethrow)
+if not 0 <= Afreethrow <= 100:
+    exit("범위를 벗어남(0 <= n <= 100)")
 
-appletotal = apple3*3 + apple2*2 + apple1
-bananatotal = banana3*3 + banana2*2 + banana1
-
-if appletotal > bananatotal:
-    print('A')
-elif bananatotal > appletotal:
-    print('B')
-else:
-    print('T')
+AshotPoint = Ashot * 3
+AfieldGoalPoint = AfieldGoal * 2
+AfreethrowPoint = Afreethrow
+Apoint = AshotPoint + AfieldGoalPoint + AfreethrowPoint
