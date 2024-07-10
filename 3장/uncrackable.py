@@ -15,12 +15,12 @@ for char in password:
 #패스워드는 8~12자 이내여야 함
 #비밀번호 통과 규칙은 3개이상의 소문자, 2개이상의 대문자, 1개 이상의 0 ~9까지의 자연수가 들어가야 함
 if not 8 <= len(password) <= 12:
-    exit ('invalid')
+    print('invalid')
 if lower < 3:
-    exit ('invalid')
+    print('invalid')
 if upper < 2:
-    exit('invalid')
+    print('invalid')
 if digit == 0:
-    exit('invalid')
+    print('invalid')
 else:
     print('valid')
