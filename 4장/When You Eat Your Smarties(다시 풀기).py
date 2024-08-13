@@ -5,7 +5,7 @@ MAX_GRIP = 7
 RED_EAT_TIME = 16
 GRIP_EAT_TIME = 13
 
-testcase = 10
+testcase = 1
 results = []
 
 for i in range(testcase):
@@ -15,32 +15,31 @@ for i in range(testcase):
     count = 0
 
     while limit > 0:
-        smarties = input()
+        smaties = input()
         limit -= 1
 
-        if smarties == "end of box":
-            if count > 0:
-                if red == count:
-                    time += red * RED_EAT_TIME
-                else:
-                    time += GRIP_EAT_TIME
-                    time += red * RED_EAT_TIME
-            break
         count += 1
-
-        if smarties == "red":
+        if smaties == 'red':
             red += 1
 
         if count == MAX_GRIP:
-            if red == MAX_GRIP:
+            if red == count:
                 time += red * RED_EAT_TIME
             else:
-                time += GRIP_EAT_TIME
                 time += red * RED_EAT_TIME
+                time += GRIP_EAT_TIME
             red = 0
             count = 0
 
 
+        if smaties == "end of box":
+            if count > 0:
+                if red == count:
+                    time += red * RED_EAT_TIME
+                else:
+                    time += red * RED_EAT_TIME
+                    time += GRIP_EAT_TIME
+            break
 
     results.append(time)
 
