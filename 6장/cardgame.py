@@ -8,7 +8,6 @@ def no_high(lst):
     lst는 카드를 나타내는 문자열의 리스트 입니다.
     lst에 높은 카드가 없으면 True를 반환하고 있으면 False를 반환합니다.
     """
-
     high_cards = {'jack', 'queen', 'king', 'ace'}
     for card in lst:
         if card in high_cards:
@@ -48,4 +47,4 @@ for i in range(NUM_CARD):
         player = "A"
 
 print(f'player A: {score_A} point(s).')
-print(f'player B: {score_B} point(s).')
+print(f'player B: {score_B} point(s).')0
